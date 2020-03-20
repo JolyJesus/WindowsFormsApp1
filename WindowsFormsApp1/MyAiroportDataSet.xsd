@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MyAiroportDataSet" targetNamespace="http://tempuri.org/MyAiroportDataSet.xsd" xmlns:mstns="http://tempuri.org/MyAiroportDataSet.xsd" xmlns="http://tempuri.org/MyAiroportDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="MyAiroportConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="MyAiroportConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsFormsApp1.Properties.Settings.GlobalReference.Default.MyAiroportConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_PosadaPersonalTableAdapter" GeneratorDataComponentClassName="View_PosadaPersonalTableAdapter" Name="View_PosadaPersonal" UserDataComponentName="View_PosadaPersonalTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="MyAiroportConnectionString (Settings)" DbObjectName="MyAiroport.dbo.View_PosadaPersonal" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Surname, NazvaPosady FROM dbo.View_PosadaPersonal</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Surname" DataSetColumn="Surname" />
+              <Mapping SourceColumn="NazvaPosady" DataSetColumn="NazvaPosady" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="MyAiroportDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="MyAiroportDataSet" msprop:Generator_UserDSName="MyAiroportDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_PosadaPersonal" msprop:Generator_TableClassName="View_PosadaPersonalDataTable" msprop:Generator_TableVarName="tableView_PosadaPersonal" msprop:Generator_TablePropName="View_PosadaPersonal" msprop:Generator_RowDeletingName="View_PosadaPersonalRowDeleting" msprop:Generator_RowChangingName="View_PosadaPersonalRowChanging" msprop:Generator_RowEvHandlerName="View_PosadaPersonalRowChangeEventHandler" msprop:Generator_RowDeletedName="View_PosadaPersonalRowDeleted" msprop:Generator_UserTableName="View_PosadaPersonal" msprop:Generator_RowChangedName="View_PosadaPersonalRowChanged" msprop:Generator_RowEvArgName="View_PosadaPersonalRowChangeEvent" msprop:Generator_RowClassName="View_PosadaPersonalRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Surname" msprop:Generator_ColumnVarNameInTable="columnSurname" msprop:Generator_ColumnPropNameInRow="Surname" msprop:Generator_ColumnPropNameInTable="SurnameColumn" msprop:Generator_UserColumnName="Surname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NazvaPosady" msprop:Generator_ColumnVarNameInTable="columnNazvaPosady" msprop:Generator_ColumnPropNameInRow="NazvaPosady" msprop:Generator_ColumnPropNameInTable="NazvaPosadyColumn" msprop:Generator_UserColumnName="NazvaPosady">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
